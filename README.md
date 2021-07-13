@@ -25,4 +25,4 @@
 
 ![](https://raw.githubusercontent.com/FactWise/react-js-challenge/main/public/data/img/ss.png?token=AI5XGETU5SWUVZAEN4HRMC3AWCRAE)
 
-![](https://raw.githubusercontent.com/FactWise/react-js-challenge/main/public/data/img/Scrrenshot.png?token=AI5XGETU5SWUVZAEN4HRMC3AWCRAE)
+![](https://raw.githubusercontent.com/FactWise/react-js-challenge/main/public/data/img/Screenshot.png?token=AI5XGETU5SWUVZAEN4HRMC3AWCRAE)
