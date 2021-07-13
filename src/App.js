@@ -1,19 +1,37 @@
-import { useState, useEffect } from "react";
-import PieChart from "./components/pieChart";
-import "./App.css";
+import { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
+import PieChart from './components/pieChart';
+import './App.css';
 function App() {
-  const [currentDate, setCurrentDate] = useState(new Date("2021-05-29")); // Current Date Fetch from current_date.json in public/data
+  const [currentDate, setCurrentDate] = useState(dayjs()); // Current Date Fetch from current_date.json in public/data
   const [vaccineDates, setVaccineDates] = useState([]); // List Of Vaccine Dates Fetch from vaccine_dates.json in public/data
+
   useEffect(() => {
     // Use fetch() to fetch requited data from public/data
-    fetch("");
+    fetch('');
   }, []);
+
+  const incrementDate = () => {
+    setCurrentDate((currentDate) => currentDate.add(1, 'day'));
+  };
+
+  const decrementDate = () => {
+    setCurrentDate((currentDate) => currentDate.subtract(1, 'day'));
+  };
+
+  useEffect(() => {
+    console.log(currentDate);
+    console.log(currentDate);
+  }, [currentDate]);
+
   return (
     <div className="App">
       <div className="date">
-        <button>+</button> {/* Set Current Date to next date on click  */}
-        <div className="currentdate">{currentDate.toDateString()}</div>
-        <button>-</button> {/* Set Current Date to drevious date on click  */}
+        <button onClick={incrementDate}>+</button>{' '}
+        {/* Set Current Date to next date on click  */}
+        <div className="currentdate">{currentDate.format('DD-MMM-YYYY')}</div>
+        <button onClick={decrementDate}>-</button>{' '}
+        {/* Set Current Date to drevious date on click  */}
       </div>
       <div className="chart">
         {/* Update the following Component to display pie chart with proper data, alignment and colors */}
