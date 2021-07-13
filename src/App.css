@@ -1,9 +1,16 @@
 .App {
+  display: flex;
   text-align: center;
+  flex-direction: column;
 }
 .currentdate {
   margin: 20px 0px;
 }
 .chart {
-  margin: 0px 500px;
+  display: block;
+  margin-bottom: 900px;
+}
+.tableWrapper {
+  display: block;
+  margin-top: 50%;
 }
