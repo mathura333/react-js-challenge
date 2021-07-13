@@ -12,7 +12,7 @@
   - The Vaccination Status should say “Vaccine Pending” in RED COLOR if vaccination date > displayed current date
 - When the date changes, the summary, pie chart and table should all get updated.
 - Please add whatever components and styling you need.
-- Grading criteria: Correctness, functionality, code quality, styling/alignment/formatting 
+- Grading criteria: Correctness, functionality, code quality, styling/alignment/formatting
 
 ## What's Already Been Done 🏁
 
@@ -24,3 +24,5 @@
 ## Screenshots 🌄
 
 ![](https://raw.githubusercontent.com/FactWise/react-js-challenge/main/public/data/img/ss.png?token=AI5XGETU5SWUVZAEN4HRMC3AWCRAE)
+
+![Alt text](/data/img/Screenshot.png?raw=true)

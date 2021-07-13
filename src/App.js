@@ -9,6 +9,7 @@ function App() {
   const [currentDate, setCurrentDate] = useState(dayjs()); // Current Date Fetch from current_date.json in public/data
   const [vaccineDates, setVaccineDates] = useState([]); // List Of Vaccine Dates Fetch from vaccine_dates.json in public/data
   const [err, setErr] = useState('');
+  const [loading, setLoading] = useState(true);
   const [totalPeople, setTotalPeople] = useState(0);
   const [vaccinatedPeople, setVaccinatedPeople] = useState(0);
   const [data, setData] = useState([]);
@@ -41,8 +42,12 @@ function App() {
           setTotalPeople(data.length);
           setVaccineDates(vaccinationDates);
           setData(data);
+          setLoading(false);
         })
-        .catch((error) => setErr(error.message));
+        .catch((error) => {
+          setErr(error.message);
+          setLoading(false);
+        });
     };
     getVaccinationDatesArr();
     // Use fetch() to fetch requited data from public/data
@@ -90,7 +95,7 @@ function App() {
           <PieChart data={[vaccinatedPeople, totalPeople - vaccinatedPeople]} />
         </Grid>
         <Grid item xs="6" className="tableWrapper">
-          <Table columns={columns} rows={data} />
+          <Table columns={columns} rows={data} loading={loading} />
         </Grid>
       </Grid>
     </Grid>
