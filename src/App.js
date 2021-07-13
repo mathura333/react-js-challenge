@@ -28,6 +28,7 @@ function App() {
         ) : (
           <Typography color="error">Not Vaccinated</Typography>
         ),
+      align: 'center',
     },
   ];
 
